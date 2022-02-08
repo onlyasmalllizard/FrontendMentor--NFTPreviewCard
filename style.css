@@ -1,0 +1,279 @@
+/* 
+
+Contents
+--------
+1. Setup
+2. Typography
+3. Layout
+4. Whitespace
+5. Size
+6. Borders
+7. Colours
+8. Opacity
+9. Interaction Effects
+
+*/
+
+/* 1. Setup */
+
+:root {
+  --primary-1: hsl(215, 51%, 70%);
+  --primary-2: hsl(178, 100%, 50%);
+  --neutral-1000: hsl(217, 54%, 11%);
+  --neutral-900: hsl(216, 50%, 16%);
+  --neutral-800: hsl(215, 32%, 27%);
+  --neutral-100: hsl(0, 0%, 100%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Make converting font sizes from the style guide easier. 1rem = 10px */
+html {
+  font-size: 62.5%;
+}
+
+/* 2. Typography */
+
+body {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.8rem;
+}
+
+h1 {
+  font-size: 2.5rem;
+  font-weight: 600;
+}
+
+p {
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+.price p {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+}
+
+.artist-info {
+  font-size: 1.7rem;
+}
+
+.attribution {
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* 3. Layout */
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  display: block;
+}
+
+.sale-info,
+.info-block {
+  display: flex;
+  align-items: center;
+}
+
+.sale-info {
+  justify-content: space-between;
+}
+
+.image-container {
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.cube-image {
+  position: relative;
+  z-index: 0;
+}
+
+.interaction-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+/* 4. Whitespace */
+
+main {
+  margin: 1em;
+  padding: 1.5em;
+}
+
+h1 {
+  margin: 1em 0;
+}
+
+p,
+.sale-info img {
+  margin-bottom: 1em;
+}
+
+.sale-info p {
+  margin-left: 0.5em;
+}
+
+/* Overwrite inherited margin-bottom whilst setting margin-left */
+.artist-info p {
+  margin: 0 0 0 1em;
+}
+
+.artist-info {
+  padding-top: 1.1em;
+}
+
+/* 5. Size */
+
+main {
+  max-width: 18em;
+}
+
+img {
+  max-width: 100%;
+}
+
+.image-container {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.overlay {
+  width: 100%;
+  height: 100%;
+}
+
+.artist-info img {
+  width: 3rem;
+  height: auto;
+}
+
+/* 6. Borders */
+
+main {
+  border-radius: 1em;
+}
+
+.overlay,
+.cube-image {
+  border-radius: 0.3em;
+}
+
+.artist-info {
+  border-top: 0.15rem solid var(--neutral-800);
+}
+
+.artist-info img {
+  border-radius: 50%;
+  border: 0.15rem solid var(--neutral-100);
+}
+
+/* 7. Colours */
+
+body {
+  background: var(--neutral-1000);
+}
+
+main {
+  background: var(--neutral-900);
+}
+
+h1 {
+  color: var(--neutral-100);
+}
+
+a {
+  color: var(--neutral-100);
+}
+
+a:hover {
+  color: var(--primary-2);
+}
+
+a:visited {
+  color: var(--neutral-100);
+}
+
+p {
+  color: var(--primary-1);
+}
+
+.price p {
+  color: var(--primary-2);
+}
+
+.overlay {
+  background: var(--primary-2);
+}
+
+.attribution {
+  color: var(--neutral-100);
+}
+
+.attribution a {
+  color: var(--primary-2);
+}
+
+/* 8. Opacity */
+
+.overlay {
+  opacity: 0;
+}
+
+.interaction-icon {
+  opacity: 0;
+}
+
+.image-container:hover .overlay {
+  opacity: 0.5;
+}
+
+.image-container:hover .interaction-icon {
+  opacity: 1;
+}
+
+/* 9. Interaction Effects */
+
+a,
+.overlay,
+.interaction-icon {
+  transition-duration: 0.4s;
+}
+
+@media (prefers-reduced-motion) {
+  a,
+  .overlay,
+  .interaction-icon {
+    transition-duration: 0;
+  }
+}
+
+.image-container:hover .overlay {
+  cursor: pointer;
+}
