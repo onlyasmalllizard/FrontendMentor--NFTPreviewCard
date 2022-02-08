@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* This will change the default size that Tailwind operates on in order to comply with the style guide */
+html {
+  font-size: 18px;
+}

@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- displays site properly based on user's device -->
 
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
 
     <link
       rel="icon"
@@ -23,55 +23,78 @@
 
     <title>Frontend Mentor | NFT preview card component</title>
   </head>
-  <body>
-    <main>
-      <section class="description">
-        <section class="image-container">
-          <div class="overlay"></div>
+  <body
+    class="bg-neutral-900 h-screen p-5 flex flex-col justify-center items-center"
+  >
+    <main class="bg-neutral-800 max-w-xs p-5 rounded-lg">
+      <section>
+        <section class="group relative hover:cursor-pointer">
+          <div
+            class="overlay bg-primary-2 opacity-0 group-hover:opacity-50 w-full h-full z-10 rounded absolute inset-0 duration-500"
+          ></div>
           <img
             src="./images/image-equilibrium.jpg"
             alt="A transparent cube with pink sides balances on one tip. The ground reflects the cube."
-            class="cube-image"
+            class="rounded block"
           />
           <img
             src="./images/icon-view.svg"
             alt="Eye icon"
-            class="interaction-icon"
+            class="opacity-0 group-hover:opacity-100 absolute top-1/2 left-1/2 -translate-y-1/2 -translate-x-1/2 z-20 duration-500"
           />
         </section>
-        <section class="text">
-          <h1><a href="#">Equilibrium #3429</a></h1>
-          <p>Our Equilibrium collection promotes balance and calm.</p>
+        <section>
+          <h1
+            class="text-2xl font-bold text-neutral-100 hover:text-primary-2 my-4 duration-300"
+          >
+            <a href="#">Equilibrium #3429</a>
+          </h1>
+          <p class="text-primary-1 leading-6 mb-2">
+            Our Equilibrium collection promotes balance and calm.
+          </p>
         </section>
       </section>
-      <section class="sale-info">
-        <section class="info-block price">
+      <section class="flex justify-between my-2 w-full">
+        <section class="flex justify-between items-center">
           <img src="./images/icon-ethereum.svg" alt="Ethereum Icon" />
-          <p>0.041 ETH</p>
+          <p class="font-bold text-primary-2 ml-2">0.041 ETH</p>
         </section>
-        <section class="info-block time-left">
+        <section class="flex justify-between items-center">
           <img
             src="./images/icon-clock.svg"
             alt="Clock with hands pointing to 3 o'clock"
           />
-          <p>3 days left</p>
+          <p class="text-primary-1 ml-2">3 days left</p>
         </section>
       </section>
-      <section class="info-block artist-info">
+      <section class="flex items-center border-t-2 border-t-neutral-700 pt-4">
         <img
           src="./images/image-avatar.png"
           alt="The shadowed face of a white man with brown hair"
+          class="w-8 border-2 border-neutral-100 rounded-full"
         />
-        <p>Creation of <a href="#">Jules Wyvern</a></p>
+        <p class="text-primary-1 text-sm ml-2">
+          Creation of
+          <a href="#" class="text-neutral-100 hover:text-primary-2 duration-300"
+            >Jules Wyvern</a
+          >
+        </p>
       </section>
     </main>
 
-    <footer class="attribution">
+    <footer class="text-neutral-100 text-xs mt-4">
       Challenge by
-      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+      <a
+        href="https://www.frontendmentor.io?ref=challenge"
+        target="_blank"
+        class="text-primary-2 hover:text-neutral-100 duration-300"
         >Frontend Mentor</a
       >. Coded by
-      <a href="https://github.com/onlyasmalllizard">Lizard Morrow</a>.
+      <a
+        href="https://github.com/onlyasmalllizard"
+        class="text-primary-2 hover:text-neutral-100 duration-300"
+        >Lizard Morrow</a
+      >.
     </footer>
   </body>
 </html>

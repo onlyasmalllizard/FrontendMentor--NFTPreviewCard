@@ -1,0 +1,24 @@
+{
+  "name": "nft-preview-card-component-main",
+  "version": "1.0.0",
+  "description": "This is my second Frontend Mentor challenge. I've been making two versions of each one: the first time with vanilla CSS, the second with TailwindCSS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onlyasmalllizard/FrontendMentor--NFTPreviewCard.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onlyasmalllizard/FrontendMentor--NFTPreviewCard/issues"
+  },
+  "homepage": "https://github.com/onlyasmalllizard/FrontendMentor--NFTPreviewCard#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
+    "tailwindcss": "^3.0.19"
+  }
+}
